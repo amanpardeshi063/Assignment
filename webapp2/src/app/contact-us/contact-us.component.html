@@ -1,0 +1,33 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<div class="container" >
+    <h2>Create Profile</h2>
+    <form class="form-horizontal"  #cForm="ngForm"  (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="fNamw">FirstName:</label>
+        <div class="col-sm-4">
+          <input   ng-model="FirstName" required type="text" class="form-control" required id="fNamw" [(ngModel)]="customer.fName" placeholder="FirstName" name="FirstName" #FirstName="ngModel" >   
+          <small class="form-text text-muted" *ngIf="FirstName.touched && !FirstName.valid">FirstName required</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="lName">LastName:</label>
+        <div class="col-sm-4">          
+          <input type="text"  class="form-control"  required id="lName" [(ngModel)]="customer.lName" placeholder="LastName" name="lName" #lName="ngModel">
+          <small class="form-text text-muted" *ngIf="lName.touched && !lName.valid">LastName required</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4" required for="doj">Date Of Joining:</label>
+        <div class="col-sm-4">          
+          <input type="date"  class="form-control" id="doj" [(ngModel)]="customer.doj" placeholder="DD/MM/YYY" name="doj">
+        </div>
+      </div>
+      <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" [disabled]= "!cForm.valid">Submit</button>
+        </div>
+      </div>
+    </form>
+    
+  </div>
+  <router-outlet></router-outlet>

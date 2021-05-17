@@ -1,0 +1,30 @@
+
+<div class="container">
+
+
+  <form class="form-horizontal" (ngSubmit)="onSubmit()">
+    <h2>Update Profile</h2>
+    <div  class="form-group">
+      <label class="control-label col-sm-4 " for="name">First Name : </label>
+      <div class="col-sm-4">
+      <input  type="text" class="form-control" id="firstName" required [(ngModel)]="home.fName" name="firstName">
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="name">Last Name:</label>
+      <div class="col-sm-4">
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="home.lName" name="lastName">
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="name">Date of Joining:</label>
+      <div class="col-sm-4">
+      <input type="date" class="form-control" id="emailId" required [(ngModel)]="home.doj" name="doj">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+ 
+ 
+</div>
+<router-outlet></router-outlet>

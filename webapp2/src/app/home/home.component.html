@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<h1>All Customer Details</h1>
+<style>
+ 
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th{
+    text-align: center;
+  }
+  </style>
+<div class="container">
+    <div class="container-xl mt-3 border">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="background-color:#9c8d8d" >ID</th>
+        <th style="background-color: #9c8d8d">Firstname</th>
+        <th style="background-color:#9c8d8d">Lastname</th>
+        <th style="background-color:#9c8d8d">Date Of Joining</th>
+        <th style="background-color:#9c8d8d">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let h of home ">
+        <th scope="row">{{h.id}}</th>
+        <td>{{h.fName}}</td>
+        <td>{{h.lName}}</td>
+        <td>{{h.doj}}</td>
+        <td><button (click)="deleteCust(h.id)"  class="btn btn-danger">Delete</button>
+            <button (click)="getCust(h)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="container">
+  
+
+
+
+
+
+
+  
